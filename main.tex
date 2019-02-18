@@ -107,7 +107,7 @@
 %\pagestyle{scrheadings}
 
 \begingroup
-  %\input{content/01Chapter} %Introduction
+  \input{content/01Chapter} %Introduction
   \input{content/02Chapter} % Pairwise piece
   %\input{content/03Chapter} %Abrupt land change
   %\input{content/04Chapter} %Land sequence piece
@@ -118,11 +118,14 @@
 %---------------------------------------------------
 % APPENDICES
 %---------------------------------------------------
-%\appendix
-%\begingroup
-%  \input{content/Chapter01}
-%\endgroup
-%\backmatter
+\appendix
+\counterwithin{figure}{section}
+\counterwithin{table}{section}
+\chapter{Appendix}
+\begingroup
+  \input{appendix/02AChapter.tex}
+\endgroup
+\backmatter
 %\input{front/Acronyms.tex}
 
 %---------------------------------------------------
