@@ -29,7 +29,7 @@
 %                BCOR=5mm,paper=a4,fontsize=11pt,
 %                english,%
 %                ]{scrreprt}
-\documentclass[a4paper,11pt,oneside]{memoir}
+\documentclass[a4paper,12pt,oneside]{memoir}
 
 \newcommand{\myTitle}{Quantifying the impacts of land change on biodiversity \xspace}
 %\newcommand{\mySubtitle}{Not set \xspace}
@@ -57,15 +57,14 @@
 
 \begin{document}
 %\frenchspacing
-%\raggedbottom
-%\pagenumbering{roman}
+\raggedbottom
 %\pagestyle{plain}
 
 \makeatletter
 \renewcommand{\counterwithin}{\@ifstar{\@csinstar}{\@csin}}
 \makeatother
 \pagestyle{custom}% Set page style to custom
-\chapterstyle{hansen} % Set chapter style
+\chapterstyle{madsen} % Set chapter style
 
 %---------------------------------------------------
 % PREAMBLE: roman page numbering i, ii, iii, ...
@@ -89,7 +88,8 @@
   \setlength{\parskip}{0pt} % To restore distance between Chapters, sections and subsections in the table of contents
   \pdfbookmark[0]{Contents}{contents_bookmark}
   \pagestyle{custom}% Set page style to custom
-  \chapterstyle{hansen} % Set chapter style
+  \chapterstyle{madsen}
+%  \chapterstyle{hansen} % Set chapter style
   \tableofcontents* % as per in memoir class 
   %\listoffigures % list of figures
 \endgroup
@@ -102,12 +102,12 @@
 
 \mainmatter
 
-\pagenumbering{arabic} %Start official numbering here
 %\setcounter{page}{90} % Manual adjustment if necessary
 
 % Modify the header style
 %\pagestyle{scrheadings}
 
+\pagenumbering{arabic} %Start official numbering here
 \begingroup
   \input{content/01Chapter} %Introduction
   \input{content/02Chapter} % Pairwise piece

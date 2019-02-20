@@ -197,58 +197,58 @@
 % ****************************************************************************************************
 % MEMOIR CLASS SETTINGS AND CHAPTER HEADER/STYLE
 % ****************************************************************************************************
-\definecolor{chaptercolor}{gray}{0.35}
+%\definecolor{chaptercolor}{gray}{0.35}
 % helper macros
-\newcommand\numlifter[1]{\raisebox{-3cm}[0pt][0pt]{\smash{#1}}}
-\newcommand\numindent{\kern5pt}
-\newlength\chaptertitleboxheight
-\makechapterstyle{hansen}{
-  \renewcommand\printchaptername{\raggedleft}
-  \renewcommand\printchapternum{%
-    \begingroup%
-      \leavevmode%
-      \chapnumfont%
-      \strut%
-      \numlifter{\thechapter\hrulefill}%
-      \numindent%
-    \endgroup%
-  }
-  \renewcommand*{\printchapternonum}{%
-    \vphantom{
-    \begingroup%
-      \leavevmode%
-      \chapnumfont%
-      \numlifter{\vphantom{9}}%
-      \numindent%
-    \endgroup}
-    \afterchapternum
-  }
-  \setlength\midchapskip{0pt}
-  \setlength\beforechapskip{\baselineskip}
-  \setlength{\afterchapskip}{4\baselineskip}
-  \renewcommand\chapnumfont{%
-    \fontsize{5cm}{0cm}%
-    \bfseries% or 
-    \itshape
-    %\sffamily%
-    \color{chaptercolor}%
-  }
-  \renewcommand\chaptitlefont{%
-    \normalfont%
-    \Huge%
-    \bfseries%
-    \scshape
-    \raggedright%
-  }%
-  \settototalheight\chaptertitleboxheight{%
-    \parbox{\textwidth}{\chaptitlefont \strut bg\\bg\strut}
-  }
-  \renewcommand\printchaptertitle[1]{
-    \raggedright\parbox[t][\chaptertitleboxheight][t]{.7\textwidth}{%
-      \chaptitlefont\strut ##1  \strut
-    }%
-  }
-}
+%\newcommand\numlifter[1]{\raisebox{-3cm}[0pt][0pt]{\smash{#1}}}
+%\newcommand\numindent{\kern5pt}
+%\newlength\chaptertitleboxheight
+%\makechapterstyle{hansen}{
+%  \renewcommand\printchaptername{\raggedleft}
+%  \renewcommand\printchapternum{%
+%    \begingroup%
+%      \leavevmode%
+%      \chapnumfont%
+%      \strut%
+%      \numlifter{\thechapter\hrulefill}%
+%      \numindent%
+%    \endgroup%
+%  }
+%  \renewcommand*{\printchapternonum}{%
+%    \vphantom{
+%    \begingroup%
+%      \leavevmode%
+%      \chapnumfont%
+%      \numlifter{\vphantom{9}}%
+%      \numindent%
+%    \endgroup}
+%    \afterchapternum
+%  }
+%  \setlength\midchapskip{0pt}
+%  \setlength\beforechapskip{\baselineskip}
+%  \setlength{\afterchapskip}{4\baselineskip}
+%  \renewcommand\chapnumfont{%
+%    \fontsize{5cm}{0cm}%
+%    \bfseries% or 
+%    \itshape
+%    %\sffamily%
+%    \color{chaptercolor}%
+%  }
+%  \renewcommand\chaptitlefont{%
+%    \normalfont%
+%    \Large%
+%    \bfseries%
+%    \scshape
+%    \raggedright%
+%  }%
+%  \settototalheight\chaptertitleboxheight{%
+%    \parbox{\textwidth}{\chaptitlefont \strut bg\\bg\strut}
+%  }
+%  \renewcommand\printchaptertitle[1]{
+%    \raggedright\parbox[t][\chaptertitleboxheight][t]{.7\textwidth}{%
+%      \chaptitlefont\strut ##1  \strut
+%    }%
+%  }
+%}
 
 % ****************************************************************************************************
 % Setup autoreferences
