@@ -70,6 +70,8 @@
 \captionnamefont{\footnotesize} % Size of caption text
 \captiontitlefont{\footnotesize} % Size of caption title
 
+\usepackage{chngcntr} % To allow sublabels in appendix
+
 % ********************************************************************                
 % Colors
 % ********************************************************************
@@ -96,11 +98,8 @@
 \usepackage{subfig} 
 \newsubfloat{figure} % Allow subfloats in figure environment
  
-% Also allow sidewaystables
-\usepackage{rotating}
-
+\usepackage{rotating} % Also allow sidewaystables
 \usepackage{placeins} % For subfloating barriers
-
 \usepackage{lscape} % for tables in landscape mode
 
 \usepackage[hang]{footmisc} % additional footnote options
