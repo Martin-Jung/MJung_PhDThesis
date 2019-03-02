@@ -127,30 +127,35 @@
 \backmatter
 \clearpage
 \phantomsection
+%\markright{ \spacedlowsmallcaps{Bibliography} }{\spacedlowsmallcaps{Bibliography}}
 \bibliography{allreferences}
 %\clearpage\input{front/Colophon}
 
 %---------------------------------------------------
 % APPENDICES
 %---------------------------------------------------
+\setcounter{chapter}{1}
 \appendix
 \counterwithin{figure}{section}
 \counterwithin{table}{section}
 \chapter{Appendix}
 
-\begingroup
+%\begingroup
   \section{Appendix - Chapter 2}
    % Ugly hack, but it works
+  \markboth{}{Appendix}
   \setcounter{figure}{0} \renewcommand{\thefigure}{A.2.\arabic{figure}} 
   \setcounter{table}{0} \renewcommand{\thetable}{A.2.\arabic{table}}
   \input{appendix/02AChapter.tex}
   \clearpage
+  \markboth{}{Appendix}
   \section{Appendix - Chapter 3}
+  \markboth{}{Appendix}
   \setcounter{figure}{0} \renewcommand{\thefigure}{A.3.\arabic{figure}} 
   \setcounter{table}{0} \renewcommand{\thetable}{A.3.\arabic{table}}
   \input{appendix/03AChapter.tex}
   \clearpage
-\endgroup
+%\endgroup
 
 %---------------------------------------------------
 % END DOCUMENT
