@@ -197,6 +197,37 @@
 }   
 
 % ****************************************************************************************************
+% MADSEN CLASS SETTINGS AND CHAPTER HEADER/STYLE
+% ****************************************************************************************************
+
+\usepackage{lmodern}
+% https://tex.stackexchange.com/questions/436913/move-chapter-and-chapter-number-leftwards
+\makechapterstyle{gilgauge}{%
+\chapterstyle{default}
+  \renewcommand*{\chapnamefont}{%
+    \normalfont\Large\scshape\raggedleft}
+  \renewcommand*{\chaptitlefont}{%
+    \normalfont\Huge\bfseries\sffamily\raggedleft}
+  \renewcommand*{\chapternamenum}{}
+  \renewcommand*{\printchapternum}{%
+    \makebox[36pt][l]{\hspace{0.4em}% <--- altered makebox value
+      \resizebox{!}{4ex}{%
+        \chapnamefont\bfseries\sffamily\thechapter}%
+    }%
+  }%
+  \renewcommand*{\printchapternonum}{%
+    \chapnamefont \phantom{\printchaptername \chapternamenum%
+      \makebox[0pt][l]{\hspace{0.4em}%
+        \resizebox{!}{4ex}{%
+          \chapnamefont\bfseries\sffamily 1}%
+      }%
+    }%
+    \afterchapternum %
+  }% 
+  \renewcommand*{\afterchapternum}{%
+    \par\hspace{1.5cm}\hrule\vskip\midchapskip}}
+
+% ****************************************************************************************************
 % MEMOIR CLASS SETTINGS AND CHAPTER HEADER/STYLE
 % ****************************************************************************************************
 %\definecolor{chaptercolor}{gray}{0.35}
