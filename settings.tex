@@ -85,6 +85,47 @@
 \definecolor{RoyalBlue}{cmyk}{1, 0.50, 0, 0}
 \definecolor{Black}{cmyk}{0, 0, 0, 0}
 
+% ********************************************************************                
+% Colorboxes
+% ********************************************************************
+% Use package tcolorbox to provide little info boxes
+% https://tex.stackexchange.com/questions/250069/create-a-color-box
+\usepackage[many]{tcolorbox}
+\usetikzlibrary{calc}
+\definecolor{myblue}{RGB}{0,163,243}
+
+\tcbset{mystyle/.style={
+  breakable,
+  enhanced,
+  outer arc=0pt,
+  arc=0pt,
+  colframe=myblue,
+  colback=myblue!20,
+  attach boxed title to top left,
+  boxed title style={
+    colback=myblue,
+    outer arc=0pt,
+    arc=0pt,
+    top=3pt,
+    bottom=3pt,
+    },
+  fonttitle=\sffamily
+  }
+}
+
+\newtcolorbox[]{definitions}[1][]{
+  mystyle,
+  title=Definitions~\thetcbcounter,
+  overlay unbroken and first={
+      \path
+        let
+        \p1=(title.north east),
+        \p2=(frame.north east)
+        in
+        node[anchor=west,font=\sffamily,color=myblue,text width=\x2-\x1] 
+        at (title.east) {#1};
+  }
+}
 
 % ****************************************************************************************************
 % Setup floats: tables, (sub)figures, and captions
