@@ -79,3 +79,41 @@ Lastly, we assessed the explanatory power of each group of variables ($f_{local}
 
 \section{Results}
 \label{C05_03}
+
+Both local bird diversity and landscapes have changed across the continental USA. Across all BBS routes the geometric mean of relative abundances (GM) increased by 0.01\% $\pm$ 0.002 standard error (SE) per year (mean first derivative) in the first two decades from 1984 to 2005, after which annual decreases of 0.01\% $\pm$ 0.003 SE were observed (Appendix Figure \ref{SI05_05}\textbf{a}). The compositional similarity of bird assemblages (pBC) decreased by 0.006\% $\pm$ 0.001 SE per year (Appendix Figure \ref{SI05_05}\textbf{b}). Landscapes surrounding each BBS route had on average 6\% $\pm$ 6.42 SD (range 0.02\% – 78.96\%) of land experiencing at least one land change in the period 1984 to 2017 (Appendix Figure \ref{SI05_06}). Over the same period a decrease in landscape-wide land changes were observed (mean robust linear trend = -0.00015 $\pm$ 0.0198 SD, range -0.545 to 0.112) but with large spatial variability (Appendix Figure \ref{SI05_07}). Across all BBS routes the mean proportion of land experiencing a land change with an abrupt shift in magnitude (loss or gain in EVI) fluctuated strongly (Appendix Figure \ref{SI05_08}\textbf{a}), while shifts in trend showed an inverse hump-shaped pattern for greening and a continuous decrease for browning (Appendix Figure \ref{SI05_08}\textbf{b}). Shifts in magnitude or trend were little correlated among each other (Appendix Figure \ref{SI05_09}) and across ecoregions (Appendix Figure \ref{SI05_10}).
+
+% ---------------- Figure 2 --------------------- %
+\begin{figure}[htb]
+\centering
+\includegraphics[width=1\textwidth]{chapter5/F02}
+\caption{ Partial effects of landscape-wide land changes (proportion of landscape) per unit of change in (\textbf{a}) the geometric mean of relative abundance (GM) and (\textbf{b}) the progressive Bray-Curtis index (pBC). Colours indicate either abrupt shifts in magnitude with losses (red lines) or gains (blue) in EVI or trend with greening (green) or browning (brown) land. Error margins show the estimated standard error of the partial effect (grey shading) and rugs the observed proportion of landscape-wide land changes across all BBS routes. Flat lines without error margins indicate that the term was penalized out during model fitting and thus had no effect on the biodiversity measure. }
+\label{F05_02}
+\end{figure}
+% -------------------------------------------- %
+
+Bird diversity change is correlated with landscape-wide land changes. The GM significantly decreased ($F4 = 10.8, p < 0.001$) in years with a large proportion of landscape-wide abrupt gains of EVI (Figure \ref{F05_02}\textbf{a}, blue line). More landscape-wide abrupt losses of EVI led to a significant decrease in GM ($F4 = 6.44, p = 0.001$), but only after \textasciitilde 10\% of the landscape had abrupt losses in a given year (Figure \ref{F05_02}\textbf{a}, red line). The GM also decreased with more land in the landscape browning ($F4 = 37.89, p = 0.057$), while a high proportion of greening land in the landscape had no effect ($F4 = 0, p = 0.529$) on changes in GM (Figure \ref{F05_02}\textbf{a}). The pBC significantly increased with a large proportion of landscape-wide abrupt losses ($F4 = 8.25, p < 0.001$) or gains ($F4 = 0.614, p = 0.1$) in EVI (Figure \ref{F05_02}\textbf{b}). The pBC also increased with a large proportion of browning ($F4 = 13.81, p = 0.038$) or greening land ($F4 = 74.25, p = 0.005$) in the wider landscape (Figure \ref{F05_02}\textbf{b}).
+
+Local factors strongly influence local bird biodiversity change. The GM significantly increased ($F4 = 1789.06, p < 0.001$, Appendix Figure \ref{SI05_11}\textbf{a}) and the pBC significantly decreased ($F4 = 1923.71, p < 0.001$, Appendix Figure \ref{SI05_11}\textbf{b}) at BBS routes of high mean elevation. GM significantly increased ($F4 = 291.05, p < 0.001$) in landscapes with overall low photosynthetic activity (EVI < 0.4) but decreased in landscapes with high photosynthetic activity; a pattern that was reversed for pBC (Appendix Figure \ref{SI05_11}). Years of abnormal precipitation between January and March had no effect on GM or pBC change (Appendix Figure \ref{SI05_11}).
+
+Land changes in one year continued to influence local bird diversity in subsequent years. The mean explanatory power (out-of-bag [OOB] $R^2$) of abrupt shifts in magnitude in concomitant years (Lag 0, Figure \ref{F05_03}) was 0.03 (0.047 cumulatively) for GM and 0.126 (0.122) for pBC. A consideration of abrupt shifts in magnitude in preceding years explained modestly more variation than those in concomitant years (Figure \ref{F05_03}). The individual inclusion of one to five preceding years of abrupt shifts in magnitude explained similar amounts of variation (mean OOB $R^2$ = 0.031) in GM, whereas for pBC only preceding abrupt shifts in magnitude more than three years ago increased explanatory power (mean OOB $R^2$ = 0.129, Figure \ref{F05_03}). Considering cumulatively preceding abrupt shifts in magnitude increased the mean explanatory power for both GM and pBC (Figure \ref{F05_03}), although for pBC the relative improvement in explanatory power was highest at three cumulatively included preceding years (mean OOB $R^2$ of year three = 0.128).
+
+% ---------------- Figure 3 --------------------- %
+\begin{figure}[htb]
+\centering
+\includegraphics[width=1\textwidth]{chapter5/F03}
+\caption{Preceding landscape-wide land changes of one to five years improve predictions of GM and pBC. Bird diversity time series for all BBS routes were randomly split (100 times) into training and test datasets and the explanatory power ($R^2$) was assessed relative to a model that only included concomittant abrupt shifts in magnitude (gain or loss of EVI) averaged across all random subsets. Symbols differentiate between two types of model structures, where past land changes were either added individually (circles) or aggregated cumulatively (triangles). Error bars show the standard deviation of the out-of-bag (OOB) $R^2$ values. }
+\label{F05_03}
+\end{figure}
+% -------------------------------------------- %
+
+We assessed whether the explanatory power of all variables varied in space (Figure \ref{F05_04}\textbf{a},\textbf{c}) and for linear trends of bird diversity change (Figure \ref{F05_04}\textbf{b},\textbf{d}). The full model including all variables explained 64.7\% of the total variation of changes in GM (69.3\% for pBC), with most of the variation explained by unknown differences among BBS routes (partial $R^2$ of $f_{obs}$ = 58.5\%. for GM and 39.8\% for pBC). Of all variables considered, landscape-wide land changes were the most important predictor of GM change for 34.83\% of BBS routes (partial $R^2$ range 0 – 54\%, Figure \ref{F05_04}\textbf{a}) and for pBC in 46.6\% of BBS routes (partial $R^2$ range 0 – 7\%, Figure \ref{F05_04}\textbf{c}). Incidentally, landscape-wide land changes were the best predictor for some of the greatest changes (increase/decrease per year) in local bird diversity measures (Figure \ref{F05_04}\textbf{b},\textbf{d}).
+
+% ---------------- Figure 4 --------------------- %
+\begin{figure}[htb]
+\centering
+\includegraphics[width=1\textwidth]{chapter5/F04}
+\caption{Most important group of variables explaining changes in the (\textbf{a}) GM and (\textbf{c}) pBC at 2745 BBS routes across the United States of America. Point sizes in (\textbf{a},\textbf{c}) indicate larger partial $R^2$ of the most important variable group. Colours indicate which of the considered variable groups, $f_{local}$ (red), $f_{landscape}$ (blue) or $f_{spatial}$ (green), explained most of the variation (greatest partial $R^2$) in the full model. (\textbf{b},\textbf{d}) Partial $R^2$ of the most important variable group averaged per increase or decrease (robust linear trend per year) in GM or pBC.  }
+\label{F05_04}
+\end{figure}
+% -------------------------------------------- %
+
