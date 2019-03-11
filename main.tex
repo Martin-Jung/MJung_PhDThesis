@@ -73,11 +73,11 @@
   \frontmatter
   \pagenumbering{roman}
   \clearpage\input{front/Titlepage} % Title page
-  %\clearpage\input{front/Dedication} % Dedication page
-  \clearpage\input{front/Acknowledgments} % Acknowledgements page
-%  \addcontentsline{toc}{chapter}{Acknowledgements}
-  \clearpage\input{front/Declaration} % Declaration
+  \clearpage\input{front/License} % License
+  \clearpage\input{front/Declaration} % Declaration page
   \clearpage\input{front/Abstract} % Abstract page
+  %\addcontentsline{toc}{chapter}{Acknowledgements}
+  \clearpage\input{front/Acknowledgments} % Acknowledgements page
 %  \addcontentsline{toc}{chapter}{Summary}
 \endgroup
 %---------------------------------------------------
@@ -92,7 +92,8 @@
   \chapterstyle{madsen}
 %  \chapterstyle{hansen} % Set chapter style
   \tableofcontents* % as per in memoir class 
-  %\listoffigures % list of figures
+  %\listoffigures* % list of figures
+  %\listoftables* % list of tables
 \endgroup
 
 
