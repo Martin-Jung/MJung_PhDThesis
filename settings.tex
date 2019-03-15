@@ -113,9 +113,9 @@
   }
 }
 
-\newtcolorbox[]{definitions}[1][]{
+\newtcolorbox[auto counter,number within=chapter]{definitions}[1][]{
   mystyle,
-  title=Definitions~\thetcbcounter,
+  title=Box~\thetcbcounter,
   overlay unbroken and first={
       \path
         let
