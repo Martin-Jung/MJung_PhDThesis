@@ -1,24 +1,29 @@
-% Please add the following required packages to your document preamble:
-% \usepackage{booktabs}
-
-\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
-\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
-\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
-
-\begin{landscape}
-\begin{table}[]
+%\begin{landscape}
+\begin{table}[ht]
 \caption{Common terms and descriptions referring to lasting impacts of environmental changes on biodiversity}
 \label{T01_01}
-\begin{tabular}{| L{3cm} | C{15cm} | R{6cm} |}
+
+\newcolumntype{b}{X}
+\newcolumntype{m}{>{\hsize=.6\hsize}X}
+\newcolumntype{s}{>{\hsize=.4\hsize}X}
+
+\begin{tabularx}{\textwidth}{ sbm }
 \toprule
-\textbf{Term}      & \textbf{Description}                                                                                                                                                         & \textbf{Reference}                                                                       \\ \midrule
-Land-use history   & \begin{tabular}[c]{@{}l@{}}“Observed abiotic and biotic properties that are caused by past land use”\end{tabular}                                                        & \begin{tabular}[c]{@{}l@{}} \citep{Foster2003,Perring2015}\end{tabular}    \\
-Extinction debt    & \begin{tabular}[c]{@{}l@{}}“The number of species committed to delayed extinction following a forcing event ”\end{tabular}
-& \begin{tabular}[c]{@{}l@{}} \citep{Tilman1994,Kuussaari2009} \end{tabular}  \\
-Immigration credit & \begin{tabular}[c]{@{}l@{}}“The number of species committed to delayed   immigration following a forcing event”\end{tabular}                                               & \citep{Jackson2010}                                                                    \\
-Ecological memory  & \begin{tabular}[c]{@{}l@{}} “The degree to which an ecological process is shaped by past modifications of the landscape, biotic and abiotic factors.”\end{tabular}    & \citep{Padisak1992,Peterson2002,Bengtsson2003,Ogle2015} \\
-Carry-over effect  & \begin{tabular}[c]{@{}l@{}} “Situation in which an individual’s previous history and experience explains their current performance in a given situation”\end{tabular} & \begin{tabular}[c]{@{}l@{}} \citep{Harrison2011,OConnor2014} \end{tabular} \\
-Biotic lag & \begin{tabular}[c]{@{}l@{}} Term summarizing the observed difference in biodiversity caused by lasting or lagged effects of past environmental changes \end{tabular}   & \begin{tabular}[c]{@{}l@{}}\citep{DePalma2018}\\   and this thesis\end{tabular}   \\ \bottomrule
-\end{tabular}
+\textbf{Term} & \textbf{Description} & \textbf{Reference}   \\
+\midrule
+
+Land-use history  &  “Observed abiotic and biotic properties that are caused by past land use” & \citep{Foster2003,Perring2015} \\
+
+Extinction debt & “The number of species committed to delayed extinction following a forcing event” &  \citep{Tilman1994,Kuussaari2009} \\
+
+Immigration credit & “The number of species committed to delayed immigration following a forcing event” & \citep{Jackson2010} \\
+
+Ecological memory & “The degree to which an ecological process is shaped by past modifications of the landscape, biotic and abiotic factors.” & \citep{Padisak1992,Peterson2002,Bengtsson2003,Ogle2015} \\
+
+Carry-over effect & “Situation in which an individual’s previous history and experience explains their current performance in a given situation” & \citep{Harrison2011,OConnor2014} \\
+
+Biotic lag &  Term summarizing the observed difference in biodiversity caused by lasting or lagged effects of past environmental changes  & \citep{DePalma2018} and this thesis   \\ \bottomrule
+
+\end{tabularx}
+
 \end{table}
-\end{landscape}
