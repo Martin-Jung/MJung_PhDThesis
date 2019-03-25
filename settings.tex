@@ -44,13 +44,14 @@
 \PassOptionsToPackage{printonlyused,smaller,withpage}{acronym}
 \usepackage[printonlyused, withpage]{acronym} % nice macros for handling all acronyms in the thesis
 
-\usepackage{titlesec, color, calc, blindtext}
+\usepackage{color, calc, blindtext}
+\usepackage[compact]{titlesec} % compact white space under titles
 \usepackage[pdftex]{graphicx} % Graphics options
 %\usepackage{multicol} % multicolumn text
 \usepackage{wrapfig} % figures wrapped in text
 \usepackage{lineno} % Line Numbers 
 \usepackage{epigraph} % For epigraphs in front of chapters
-
+\usepackage[acronym]{glossaries}
 % Provides a linked \doi{#1} that links doi:#1 to http://dx.doi.org/#1
 % To change the text before the DOI, adjust this command   %\renewcommand\doitext{doi:}
 \usepackage{doi}  
@@ -136,7 +137,7 @@
 \newcommand{\tableheadline}[1]{\multicolumn{1}{c}{\spacedlowsmallcaps{#1}}}
 \newcommand{\myfloatalign}{\centering} % to be used with each float for alignment
 \usepackage{caption}
-\captionsetup{labelfont=bf,font=small} %hang makes it hang
+\captionsetup{labelfont=bf,font = small} %hang makes it hang
 \usepackage{subfig} 
 \newsubfloat{figure} % Allow subfloats in figure environment
  
@@ -148,7 +149,6 @@
 \usepackage{tablefootnote} % footnote for tables 
 \usepackage{booktabs} % lines for tables
 \usepackage{multirow}
-
 
 % ****************************************************************************************************
 % Setup code listings
@@ -194,6 +194,7 @@
 \usepackage{natbib}				
 
 \bibliographystyle{latex/ecology}
+\setlength{\bibsep}{0pt plus 0.3ex} % Spacing between references
 
 % ****************************************************************************************************
 % Setup the style of the backrefs from the bibliography
