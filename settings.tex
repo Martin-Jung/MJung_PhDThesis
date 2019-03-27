@@ -156,10 +156,12 @@
 \usepackage{listings} 
 %\lstset{emph={trueIndex,root},emphstyle=\color{BlueViolet}}%\underbar} % for special keywords
 \lstset{language=[LaTeX]Tex,%python,
-    keywordstyle=\color{RoyalBlue},%\bfseries,
+%    keywordstyle=\color{RoyalBlue},%\bfseries,
+    keywordstyle=\color{Black}, 
     basicstyle=\small\ttfamily,
     %identifierstyle=\color{NavyBlue},
-    commentstyle=\color{Green}\ttfamily,
+%    commentstyle=\color{Green}\ttfamily,
+    commentstyle=\color{Black}\ttfamily,
     stringstyle=\rmfamily,
     numbers=none,%left,%
     numberstyle=\scriptsize,%\tiny
@@ -223,7 +225,7 @@
 % Hyperreferences
 \hypersetup{%
     %draft,	% = no hyperlinking at all (useful in b/w printouts)
-    colorlinks=true, linktocpage=true, pdfstartpage=3, pdfstartview=FitV,%
+    colorlinks=false, linktocpage=true, pdfstartpage=3, pdfstartview=FitV,%
     % uncomment the following line if you want to have black links (e.g., for printing)
     % colorlinks=false, linktocpage=false, pdfborder={0 0 0}, pdfstartpage=3, pdfstartview=FitV,% 
     breaklinks=true, pdfpagemode=UseNone, pageanchor=true, pdfpagemode=UseOutlines,%
@@ -403,7 +405,7 @@
 \setlength{\footnotemargin}{3mm}
 
 % Set page style and headers
-\renewcommand{\sectionmark}[1]{\markboth{}{\scriptsize{\thesection\ #1} } } % with number of section a
+\renewcommand{\sectionmark}[1]{\markboth{}{\small{\thesection\ #1} } } % with number of section a
 
 \makepagestyle{custom}% Create custom page style
 \makeoddhead{custom}% Adjust odd header for custom page style
